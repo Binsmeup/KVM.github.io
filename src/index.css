@@ -7,3 +7,9 @@
 :root{
     font-family: 'inter', sans-serif;
 }
+
+@layer components {
+    .custom-inset-shadow {
+      @apply shadow-[inset_0px_-11px_8px_-10px_#000,inset_0px_11px_8px_-10px_#000];
+    }
+  }

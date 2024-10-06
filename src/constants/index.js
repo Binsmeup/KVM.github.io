@@ -2,39 +2,87 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import serv1 from "../assets/projects/serv1.jpg";
+import serv2 from "../assets/projects/serv2.jpg";
+import serv3 from "../assets/projects/serv3.png";
+import serv4 from "../assets/projects/serv4.jpg";
+import serv5 from "../assets/projects/serv5.jpg";
+import serv6 from "../assets/projects/serv6.png";
+import serv7 from "../assets/projects/serv7.jpg";
+import serv8 from "../assets/projects/serv8.png";
+import serv9 from "../assets/projects/serv9.jpg";
+import serv10 from "../assets/projects/serv10.jpg";
+import serv11 from "../assets/projects/serv11.png";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `At KVM Electronics Services, we are revolutionizing the way industries operate through our state-of-the-art automation solutions. With a focus on innovation, precision, and reliability, we empower businesses to optimize their processes, enhance productivity, and stay ahead in a rapidly evolving technological environment. From advanced automation systems to custom-built solutions, we are committed to driving efficiency and performance across industries, transforming the future of industrial automation.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const MISSION_CONTENT = [
+  "Be responsible to customer needs, delivering optimal solution and value-added services",
+  "Ensure sustainable growth and professional excellence using state-of-the-art technology, process-driven approaches, eco-friendly solutions",
+  "Foster a culture of mutual trust, respect, teamwork, continuous learning, innovation, challenge and employee empowerment to provide a growth-oriented workplace",
+  "Adhere to fair, transparent and ethical practices in interactions with all customers",
+  "Remain flexible and agile, continually adapting to the changing business environment"
+];
+
+export const VISION_CONTENT = `To become a leading integrated engineering solutions provider in the global automation sector and continously creating value to our customers.`;
+
+export const OBJECTIVES_CONTENT = `To place KVM electronics services to be the preferred Industrial Automation Solutions Provider with our existing and potential customers and markets by delivering optimal solutions and maintain pre-sale and after-sale customer support and customer satisfaction as per the standards and requirements set by the company aiming to annually increase our market.                                                                                                                                                                                              `;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    imageUrl: serv1,
+    services: "Provide Industrial Automation Solution",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    imageUrl: serv2,
+    services: "Supply Machine Automation Parts (PLC, HMI, Inveter and Servo)",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    imageUrl: serv3,
+    services: "SCADA Integration",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
   },
   {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    imageUrl: serv4,
+    services: "Control Panel Wiring and Installation",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv5,
+    services: "Machine Automation Consultationr",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv6,
+    services: "Machine Trouble Shooting Related in PLC, HMI, Inverters and Servo",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv7,
+    services: "Machine Sequence Modification",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv8,
+    services: "Migration of PLC, HMI, Inverter and Servo",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv9,
+    services: "Provide Mitsubishi PLC, HMI and Inverter trainings",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv10,
+    services: "MCCB, MCB and MCC Panel Assemble",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+  },
+  {
+    imageUrl: serv11,
+    services: "Electrical Wiring Works",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
   },
 ];
 
@@ -70,7 +118,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Blk3 Lot37 Maalaga St. Fiesta Communities Matatalaib Tarlac City",
+  phoneNo: "+63 917-833-5181 / +63 917-632-7757",
+  email: "kvmelectronics@gmail.com",
 };
