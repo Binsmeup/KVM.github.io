@@ -40,12 +40,12 @@ const About = () => {
           transition={{duration: 0.5 }}           
           className="w-full lg:w-1/2 flex flex-col"
         >
-          <div className="flex items-center justify-between px-6 py-10">
-            <h1 className="font-bold text-6xl w-48 text-left">
+          <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-6 sm:py-10">
+            <h1 className="font-bold text-4xl sm:text-6xl w-full sm:w-48 text-center sm:text-left mb-4 sm:mb-0">
               {showMission ? "MISSION" : "VISION"}
             </h1>
             <FaArrowRight 
-              className="text-6xl cursor-pointer hover:text-red-500 transition-colors"
+              className="text-4xl sm:text-6xl cursor-pointer hover:text-red-500 transition-colors"
               onClick={toggleContent}
             />
           </div>
