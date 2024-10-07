@@ -1,41 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import proPic6 from "../assets/Slide/slide1.jpg";
 import proPic7 from "../assets/Slide/slide2.jpg";
 import proPic3 from "../assets/Slide/slide3.jpg";
 import proPic4 from "../assets/Slide/slide4.jpg";
 import proPic5 from "../assets/Slide/slide5.jpg";
 import proPic8 from "../assets/Slide/slide6.jpg";
+import proPic9 from "../assets/Slide/slide7.jpg";
 import proPic1 from "../assets/Slide/Brochure1.png";
 import proPic2 from "../assets/Slide/Brochure2.png";
+import logo from "../assets/Logo.png";
+
 
 const Hero = () => {
-  const images = [proPic1, proPic2, proPic3, proPic4, proPic5, proPic6, proPic7, proPic8]; // Array for the slider
+  const images = useMemo(() => [proPic1, proPic2, proPic3, proPic4, proPic5, proPic6, proPic7, proPic8, proPic9], []);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   }, [images.length]);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
-        style={{ 
-          backgroundImage: `url(${images[currentIndex]})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ 
+            backgroundImage: `url(${image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      ))}
 
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80">
-          <div className="text-center text-white">
-            <h1 className="text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">KVM Electronics Services</h1>
-            <p className="text-2xl">Transforming Industries with Cutting-Edge Automation</p>
+      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80">
+        <div className="text-center text-white">
+          <div className="flex items-center justify-center">
+            <img className="w-24 h-24 mr-4" src={logo} alt="logo" />
+            <h1 className="text-6xl font-bold tracking-tight lg:text-8xl">KVM Electronics Services</h1>
           </div>
+          <p className="text-2xl mt-4">Your Partner For Machine Automation</p>
         </div>
       </div>
 

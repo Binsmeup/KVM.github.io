@@ -1,10 +1,21 @@
+import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import mapImage from "../assets/location.png";
+import officeImage from "../assets/Office.jpg";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const Location = () => {
+  const [currentImage, setCurrentImage] = useState(mapImage);
   const officeAddress = "KVM Electronics Services, San Manuel Block 5, Tarlac City, 2300 Tarlac";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage(prevImage => prevImage === mapImage ? officeImage : mapImage);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="pb-16 ">
@@ -32,11 +43,11 @@ const Location = () => {
             className="block text-gray-700 hover:text-red-500 transition-all duration-300"
           >
             <div className="md:flex">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 h-96 relative">
                 <img 
-                  src={mapImage} 
-                  alt="Office Location Map" 
-                  className="w-full h-full object-cover" 
+                  src={currentImage} 
+                  alt="Office Location" 
+                  className="absolute w-full h-full object-cover transition-opacity duration-500" 
                 />
               </div>
               <div className="md:w-1/2 p-8">
