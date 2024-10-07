@@ -42,9 +42,9 @@ const Hero = () => {
 
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80">
         <div className="text-center text-white">
-          <div className="flex items-center justify-center">
-            <img className="w-24 h-24 mr-4" src={logo} alt="logo" />
-            <h1 className="text-6xl font-bold tracking-tight lg:text-8xl">KVM Electronics Services</h1>
+          <div className="flex flex-col items-center justify-center sm:flex-row">
+            <img className="w-16 h-16 mb-4 sm:w-24 sm:h-24 sm:mb-0 sm:mr-4" src={logo} alt="logo" />
+            <h1 className="text-4xl font-bold tracking-tight text-center sm:text-left lg:text-6xl xl:text-8xl">KVM Electronics Services</h1>
           </div>
           <p className="text-2xl mt-4">Your Partner For Machine Automation</p>
         </div>
