@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white text-black flex flex-wrap items-center justify-between py-1 border-b">
-      <div className="flex flex-col sm:flex-row items-center">
+      <div className="flex flex-col sm:flex-row items-center pr-16">
         <img className="mx-2 w-12" src={logo} alt="logo" />
         <h1 className="text-xl sm:text-2xl text-center sm:text-left">
           KVM Electronics Services
@@ -25,17 +25,23 @@ const Navbar = () => {
       </button>
 
       {/*Links Section*/}
-      <div className="hidden sm:flex flex-1 justify-center items-center">
-        <div className="flex gap-8 items-center text-lg font-medium">
-          <div className="border-r border-gray-600 px-4 py-2">
-            <a href="#about" className="hover:text-red-600">About Us</a>
-          </div>
-          <div className="px-4 py-2">
-            <a href="#services" className="hover:text-red-600">Services</a>
-          </div>
-          <div className="border-l border-gray-600 px-4 py-2">
-            <a href="#contacts" className="hover:text-red-600">Contacts</a>
-          </div>
+      <div className="hidden sm:flex flex-1 justify-left items-center">
+        <div className="flex gap-14 items-left text-lg font-medium">
+          <a href="#about" className="hover:text-red-600">
+            <div className="border-x border-gray-600 px-14 py-2">
+              About Us
+            </div>
+          </a>
+          <a href="#services" className="hover:text-red-600">
+            <div className="px-4 py-2">
+              Services
+            </div>
+          </a>
+          <a href="#contacts" className="hover:text-red-600">
+            <div className="border-x border-gray-600 px-14 py-2">
+              Contacts
+            </div>
+          </a>
         </div>
       </div>
 
